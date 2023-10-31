@@ -1,0 +1,26 @@
+# Update a city instance by ID.
+---
+tags:
+  - Cities
+parameters:
+  - name: city_id
+    in: path
+    type: string
+    required: true
+    # The unique ID of the city to be updated.
+    description: the unique id of the city to be update
+  - name: update_request
+    in: body
+    required: true
+    # The request body should contain the updates for the city instance.
+
+responses:
+  404:
+    # Responds with a 404 status code if the associated state is not found.
+    description: State not found 😳
+  400:
+    # Responds with a 400 status code for an invalid JSON request.
+    description: Not a Valid JSON
+  200:
+    # Responds with a 200 status code for a successful request.
+    description: Successful request ✔️

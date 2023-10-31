@@ -1,0 +1,94 @@
+# Search places
+---
+tags:
+  - Places
+parameters:
+  - name: user_id and name
+    in: body
+    required: false
+    # Describes the optional parameters for the search.
+    description: required ids
+    requires:
+      - states
+      - cities
+      - amenities
+    properties:
+      states:
+        type: array
+        items:
+          type: string
+      cities:
+        type: array
+        items:
+          type: string
+      amenities:
+        type: array
+        items:
+          type: string
+
+responses:
+  200:
+    # Responds with a 200 status code for a successful request.
+    description: Succsesful resquest
+    schema:
+      type: array
+      items:
+        properties:
+          __class__:
+            type: "string"
+          updated_at:
+            type: string
+            # Describes the datetime of instance update.
+            description: datetime of instance update
+          created_at:
+            type: string
+            # Describes the time of last update of the instance.
+            description: time of last update of the instance
+          id:
+            type: string
+            # Describes the unique ID of the state instance.
+            description: The unique id of the state instance
+          description:
+            type: string
+            # Describes the place description.
+            description: Place description
+          latitude:
+             type: number
+             # Describes the place latitude.
+             description: Place latitude
+          longitude:
+             type: number
+             # Describes the place longitude.
+             description: Place longitude
+          max_guest:
+             type: integer
+             # Describes the maximum number of guests.
+             description: Max guests
+          name:
+            type: string
+            # Describes the place name.
+            description: Place name
+          number_bathrooms:
+             type: integer
+             # Describes the number of bathrooms.
+             description: Number of bathrooms
+          number_rooms:
+             type: integer
+             # Describes the number of rooms.
+             description: Number of rooms
+          price_by_night:
+             type: number
+             # Describes the price per night.
+             description: Price by night
+          user_id:
+             type: string
+             # Describes the owner's ID.
+             description: Owner id
+
+  404:
+    # Responds with a 404 status code for "Resource not found."
+    description: Resource not found
+
+  400:
+    # Responds with a 400 status code for "Not a valid JSON."
+    description: Not a valid JSON

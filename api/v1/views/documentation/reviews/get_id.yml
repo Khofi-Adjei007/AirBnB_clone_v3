@@ -1,0 +1,46 @@
+# GET method, retrieve a review
+---
+tags:
+  - Reviews
+parameters:
+  - name: review_id
+    in: path
+    type: string
+    required: true
+    # Describes the unique ID of the review to retrieve.
+    description: Review ID
+
+responses:
+  200:
+    # Responds with a 200 status code for a successful request.
+    description: Successful request ✔️
+    schema:
+      type: array
+      items:
+        properties:
+          __class__:
+            type: "string"
+          created_at:
+            type: string
+            # Describes the datetime of instance creation.
+            description: datetime of instance creation
+          updated_at:
+            type: string
+            # Describes the time of the last update of the instance.
+            description: time of the last update of the instance
+          id:
+            type: string
+            # Describes the unique ID of the review instance.
+            description: The unique ID of the review instance
+          text:
+            type: string
+            # Describes the text content of the review.
+            description: Review text
+          place_id:
+            type: string
+            # Describes the ID of the place associated with the review.
+            description: Place ID
+
+  404:
+    # Responds with a 404 status code when the review is not found.
+    description: Review not found

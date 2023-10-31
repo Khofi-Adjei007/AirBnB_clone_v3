@@ -1,0 +1,24 @@
+# This PUT method is used to update an amenity instance by ID.
+---
+tags:
+  - Amenities
+parameters:
+  - name: amenity_id
+    in: path
+    type: string
+    required: true
+    # The unique ID of the amenity to be updated.
+    description: the unique id of the amenity to be updated
+  - name: update_request
+    in: body
+    required: true
+responses:
+  404:
+    # Responds with a 404 status code if the state is not found.
+    description: State not found 😳
+  400:
+    # Responds with a 400 status code for an invalid JSON request.
+    description: Not a Valid JSON
+  200:
+    # Responds with a 200 status code for a successful request.
+    description: Successful request ✔️

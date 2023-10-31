@@ -1,0 +1,25 @@
+# Update a state instance by id
+---
+tags:
+  - Places
+parameters:
+  - name: place_id
+    in: path
+    type: string
+    required: true
+    # Describes the unique ID of the place to be updated.
+    description: the unique id of the place to be update
+  - name: request
+    in: body
+    required: true
+
+responses:
+  404:
+    # Responds with a 404 status code for "State not found."
+    description: State not found 😳
+  400:
+    # Responds with a 400 status code for "Not a Valid JSON."
+    description: Not a Valid JSON
+  200:
+    # Responds with a 200 status code for a successful request.
+    description: Successful request ✔️
