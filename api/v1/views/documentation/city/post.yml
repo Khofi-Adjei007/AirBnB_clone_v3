@@ -1,31 +1,26 @@
-# Post a new city.
----
-tags:
-  - Cities
-parameters:
-  - state_id:
-      in: path
-      type: string
-      required: true
-      # The unique ID of the city's associated state.
-      description: city state id
-  - name: body_request
-      in: body
-      required: true
-      # The request body must include a "name" property.
-      requires:
-        - name
-      properties:
-        name:
-          type: string
+    Post a new city.
+    ---
+    tags:
+      - Cities
+    parameters:
+      - state_id:
+        in: path
+        type: string
+        required: true
+        description: city state id 
+      - name: body_request
+        in: body
+        required: true
+        requires:
+          - name
+        properties:
+          name:
+            type: string
 
-responses:
-  404:
-    # Responds with a 404 status code if the associated state is not found.
-    description: State not found!!!!
-  400:
-    # Responds with a 400 status code if the request is missing the "name" property or not a valid JSON.
-    description: Missing name or Not Valid JSON 😳
-  201:
-    # Responds with a 201 status code for a successful request.
-    description: Successful request ✔️
+    responses:
+      404:
+        description: State not found!!!!
+      400:
+        description: Missing name or Not Valid JSON 😳
+      201:
+        description: Successful request ✔️

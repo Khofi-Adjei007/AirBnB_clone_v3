@@ -1,4 +1,4 @@
-# DELETE method, delete instance by id.
+DELETE method, delete instance my id
 ---
 tags:
   - States
@@ -7,12 +7,9 @@ parameters:
     in: path
     type: string
     required: true
-    # Describes the unique ID of the state to be deleted.
     description: the unique id of the state to delete
 responses:
   404:
-    # Responds with a 404 status code when the state is not found.
     description: State not found 😳
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️

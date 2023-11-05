@@ -1,4 +1,4 @@
-# This GET method retrieves an amenity based on the provided amenity_id.
+GET method, retrieve a amenity base on amenity_id
 ---
 tags:
   - Amenities
@@ -10,8 +10,7 @@ parameters:
     description: amenity id
 responses:
   200:
-    # Responds with a 200 status code for a successful request
-    description: Successful request
+    description: Succsesful resquest
     schema:
       type: array
       items:
@@ -23,14 +22,13 @@ responses:
             description: datetime of instance creation
           updated_at:
             type: string
-            description: time of the last update of the instance
+            description: time of last update of the instance
           id:
             type: string
-            description: The unique ID of the state instance
+            description: The unique id of the state instance
           name:
             type: string
             description: Place name
 
   404:
-    # Responds with a 404 status code if the amenity is not found
-    description: Amenity not found
+    description: amenity not found

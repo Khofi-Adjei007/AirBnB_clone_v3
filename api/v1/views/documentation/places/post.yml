@@ -1,29 +1,26 @@
-# Posts a new state.
----
-tags:
-  - Places
-parameters:
-  - name: city_id
-    in: path
-    required: true
-    # Describes the city ID to be linked.
-    description: city id to be linked
-  - name: user_id and name
-    in: body
-    required: true
-    requires:
-      - user_id
-      - name
-    properties:
-      user_id:
-        type: string
-      name:
-        type: string
+    Posts a new state.
+    ---
+    tags:
+      - Places
+    parameters:
+      - name: city_id
+        in: path
+        required: true
+        description: city id to be linked
+      - name: user_id and name
+        in: body
+        required: true
+        requires:
+          - user_id
+          - name
+        properties:
+          user_id:
+            type: string
+          name:
+            type: string
 
-responses:
-  400:
-    # Responds with a 400 status code for a missing name or invalid JSON.
-    description: Missing name or Not Valid JSON 😳
-  201:
-    # Responds with a 201 status code for a successful request.
-    description: Successful request ✔️
+    responses:
+      400:
+        description: Missing name or Not Valid JSON 😳
+      201:
+        description: Successful request ✔️

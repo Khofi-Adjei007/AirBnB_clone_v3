@@ -1,4 +1,4 @@
-# GET method, get user by ID
+GET method, get user by id
 ---
 tags:
   - Users
@@ -8,46 +8,35 @@ parameters:
     type: string
     required: true
     description: User id to retrieve
-    # Parameter description indicating that 'user_id' is required to retrieve a user.
 responses:
   200:
-    description: Successful request ✔️
-    # Responds with a 200 status code for a successful request.
+    description: Succsesful resquest
     schema:
       type: array
       items:
         properties:
           __class__:
             type: "string"
-            # The data type for the '__class__' property.
           created_at:
             type: string
             description: datetime of instance creation
-            # The data type for 'created_at' property and a description of its meaning.
           updated_at:
             type: string
-            description: time of the last update of the instance
-            # The data type for 'updated_at' property and a description of its meaning.
+            description: time of last update of the instance
           id:
             type: string
             description: The unique id of the state instance
-            # The data type for 'id' property and a description of its meaning.
           email:
             type: string
             description: User email
-            # The data type for 'email' property and a description of its meaning.
           password:
             type: string
             description: User password
-            # The data type for 'password' property and a description of its meaning.
           first_name:
             type: string
             description: User first name
-            # The data type for 'first_name' property and a description of its meaning.
           last_name:
             type: string
             description: User last name
-            # The data type for 'last_name' property and a description of its meaning.
   404:
     description: User not found!
-    # Responds with a 404 status code when the requested user is not found.

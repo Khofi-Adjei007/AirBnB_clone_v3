@@ -1,27 +1,21 @@
-# Post a new user.
+Post a new amenity.
 ---
 tags:
   - Users
 parameters:
-  - name: user and password
+  - name: user and pasword
     in: body
     required: true
-    # This endpoint requires a request body.
     requires:
-      - email
-      - password
-    # It requires 'email' and 'password' properties in the request body.
+      - email:
+      - password:
     properties:
       email:
         type: string
-        # The 'email' property must be of string type.
       password:
         type: string
-        # The 'password' property must be of string type.
 responses:
   400:
     description: Missing email/password or Not Valid JSON 😳
-    # Responds with a 400 status code if 'email' or 'password' are missing or if the JSON is not valid.
   201:
     description: Successful request ✔️
-    # Responds with a 201 status code for a successful request.

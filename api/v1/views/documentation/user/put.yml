@@ -1,4 +1,4 @@
-# Update a user instance by ID
+Update a user instance by id
 ---
 tags:
   - Users
@@ -7,16 +7,12 @@ parameters:
     in: path
     type: string
     required: true
-    description: the unique id of the user to be updated
-    # 'user_id' is a path parameter and is required in the URL.
+    description: the unique id of the user to be update
   - name: update_request
     in: body
     required: true
-    # The request must have a body.
 responses:
   404:
     description: User not found 😳
-    # Responds with a 404 status code if the user with the specified ID is not found.
   200:
     description: Successful request ✔️
-    # Responds with a 200 status code for a successful request.

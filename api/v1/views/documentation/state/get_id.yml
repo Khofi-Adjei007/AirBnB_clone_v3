@@ -1,4 +1,4 @@
-# GET method, retrieve a state by unique id.
+GET method, lists state by unique id
 ---
 tags:
   - States
@@ -7,14 +7,11 @@ parameters:
     in: path
     type: string
     required: false
-    # Parameter description for the unique id of the state.
     description: the unique id of the state
 responses:
   404:
-    # Responds with a 404 status code when the state is not found.
     description: State not found
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request
     schema:
       properties:
@@ -22,17 +19,13 @@ responses:
           type: string
         created_at:
           type: string
-          # Description of the datetime of instance creation.
           description: datetime of instance creation
         updated_at:
-          type: string
-          # Description of the datetime of instance update.
-          description: datetime of instance update
+           type: string
+           description: datetime of instance update
         id:
           type: string
-          # Description of the unique ID of the state instance.
           description: The unique id of the state instance
         name:
-          type: string
-          # Description of the State name.
-          description: State name
+           type: string
+           description: State name

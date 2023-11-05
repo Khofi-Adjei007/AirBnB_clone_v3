@@ -1,4 +1,4 @@
-# DELETE method, delete place instance by id
+DELETE method, delete place instance by id
 ---
 tags:
   - Places
@@ -7,12 +7,9 @@ parameters:
     in: path
     type: string
     required: true
-    # The unique ID of the place to be deleted.
     description: the unique id of the place to be delete
 responses:
   404:
-    # Responds with a 404 status code if the place is not found.
     description: Place not found 😳
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️

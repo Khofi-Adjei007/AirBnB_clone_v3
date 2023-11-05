@@ -1,4 +1,4 @@
-# Removes a review by ID
+Removes a review by id
 ---
 tags:
   - Reviews
@@ -7,14 +7,9 @@ parameters:
     in: path
     type: string
     required: true
-    # Describes the unique ID of the review to be deleted.
-    description: the unique ID of the review to be deleted
-
+    description: the unique id of the review to be delete
 responses:
   404:
-    # Responds with a 404 status code for "Review not found in place 😳."
     description: Review not found in place 😳
-
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️

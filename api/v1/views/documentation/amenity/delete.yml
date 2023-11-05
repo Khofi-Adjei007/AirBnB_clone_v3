@@ -1,24 +1,20 @@
-# This operation removes an amenity by its ID
+Removes an amenity by id
 ---
 tags:
   - Amenities
 parameters:
-  # 'place_id' is the unique ID of the place to be deleted
   - name: place_id
     in: path
     type: string
     required: true
-    description: the unique ID of the place to be deleted
-  # 'amenity_id' is the ID of the amenity to be removed
+    description: the unique id of the place to be delete
   - name: amenity_id
     in: path
     type: string
     required: true
-    description: amenity ID to remove
+    description: amenity id to remove
 responses:
   404:
-    # Responds with a 404 status code for various situations
     description: place not found / amenity not found / amenity not found in place 😳
   200:
-    # Responds with a 200 status code for a successful request
     description: Successful request ✔️

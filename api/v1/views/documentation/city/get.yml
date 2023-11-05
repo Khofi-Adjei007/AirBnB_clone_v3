@@ -1,4 +1,4 @@
-# GET method is used to get a list of cities based on the state_id.
+GET method, get cities list on the state_id
 ---
 tags:
   - Cities
@@ -7,12 +7,10 @@ parameters:
     in: path
     type: string
     required: true
-    # The unique ID of the state for which cities are to be listed.
     description: the unique id of the state to be listed
 responses:
   200:
-    # Responds with a 200 status code for a successful request.
-    description: Successful request ✔️
+    description: Succsesful resquest
     schema:
       type: array
       items:
@@ -21,24 +19,19 @@ responses:
             type: "string"
           created_at:
             type: string
-            # Date and time of instance creation.
             description: datetime of instance creation
           updated_at:
             type: string
-            # Date and time of the last update of the instance.
-            description: time of the last update of the instance
+            description: time of last update of the instance
           id:
             type: string
-            # The unique ID of the city instance.
-            description: The unique id of the city instance
+            description: The unique id of the state instance
           name:
             type: string
-            # Name of the city.
-            description: City name
+            description: Place name
           state_id:
-            type: string
-            # The ID of the associated state for the city.
-            description: State ID
+             type: string
+             description: city id
+
   404:
-    # Responds with a 404 status code if there is no state linked to the provided ID.
-    description: No state linked to the given ID 😳
+    description: No state linked to id

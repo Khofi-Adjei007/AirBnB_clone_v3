@@ -1,4 +1,4 @@
-# GET method, lists all places of a city
+GET method, lists all places of a city
 ---
 tags:
   - Places
@@ -7,11 +7,9 @@ parameters:
     in: path
     type: string
     required: true
-    # The unique ID of the city to be listed.
     description: the unique id of the city to be listed
 responses:
   200:
-    # Responds with a 200 status code for a successful request.
     description: Succsesful resquest
     schema:
       type: array
@@ -21,53 +19,40 @@ responses:
             type: "string"
           updated_at:
             type: string
-            # Describes the datetime of instance update.
             description: datetime of instance update
           updated_at:
             type: string
-            # Describes the time of the last update of the instance.
             description: time of last update of the instance
           id:
             type: string
-            # Describes the unique ID of the state instance.
             description: The unique id of the state instance
           description:
             type: string
-            # Describes the Place description.
             description: Place description
           latitude:
-            type: number
-            # Describes the Place latitude.
-            description: Place latitude
+             type: number
+             description: Place latitude
           longitude:
-            type: number
-            # Describes the Place longitude.
-            description: Place longitude
+             type: number
+             description: Place longitude
           max_guest:
-            type: integer
-            # Describes the Max guests.
-            description: Max guests
+             type: integer
+             description: Max guests
           name:
             type: string
-            # Describes the Place name.
             description: Place name
           number_bathrooms:
-            type: integer
-            # Describes the Number of bathrooms.
-            description: Number of bathrooms
+             type: integer
+             description: Number of bathrooms
           number_rooms:
-            type: integer
-            # Describes the Number of rooms.
-            description: Number of rooms
+             type: integer
+             description: Number of rooms
           price_by_night:
-            type: number
-            # Describes the Price by night.
-            description: Price by night
+             type: number
+             description: Price by night
           user_id:
-            type: string
-            # Describes the Owner id.
-            description: Owner id
+             type: string
+             description: Owner id
 
   404:
-    # Responds with a 404 status code if the city is not found.
     description: City not found

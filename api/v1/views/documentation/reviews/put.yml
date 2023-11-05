@@ -1,4 +1,4 @@
-# Update a review instance by id.
+Update a review instance by id
 ---
 tags:
   - Reviews
@@ -7,7 +7,6 @@ parameters:
     in: path
     type: string
     required: true
-    # Describes the unique ID of the review to be updated.
     description: the unique id of the review to be update
   - name: update_request
     in: body
@@ -19,11 +18,8 @@ parameters:
         type: string
 responses:
   404:
-    # Responds with a 404 status code when the review is not found.
     description: review not found 😳
   400:
-    # Responds with a 400 status code for invalid JSON.
     description: Not a Valid JSON
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️

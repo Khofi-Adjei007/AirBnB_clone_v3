@@ -1,4 +1,4 @@
-# Update a state instance by id
+Update a state instance by id
 ---
 tags:
   - States
@@ -16,12 +16,9 @@ parameters:
     properties:
       name:
         type: string
-        # Description of the 'name' property.
-        description: New state name
+
 responses:
   404:
-    # Responds with a 404 status code when the state with the given ID is not found.
     description: State not found 😳
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️

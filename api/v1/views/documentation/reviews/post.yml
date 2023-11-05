@@ -1,4 +1,4 @@
-# Post a new review.
+Post a new review.
 ---
 tags:
   - Reviews
@@ -7,7 +7,6 @@ parameters:
     in: path
     type: string
     required: true
-    # Describes the review ID.
     description: review id
   - name: user_id and text
     in: body
@@ -23,11 +22,8 @@ parameters:
 
 responses:
   404:
-    # Responds with a 404 status code when the review is not found.
     description: review not found 😳
   400:
-    # Responds with a 400 status code for invalid JSON.
     description: Not a Valid JSON
   200:
-    # Responds with a 200 status code for a successful request.
     description: Successful request ✔️
